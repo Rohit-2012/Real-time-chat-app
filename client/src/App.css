@@ -1,7 +1,7 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background: #84b1ec;
+  background: linear-gradient(190deg, rgba(27, 82, 163, 0.897), rgba(112, 169, 196, 0.863));
   color: #212121;
   font-family: "Open Sans", sans-serif;
   display: grid;
@@ -27,7 +27,7 @@ body {
   width: 210px;
   height: 40px;
   margin: 7px;
-  border: 2px solid #43a047;
+  border: 2px solid #4354a0;
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
@@ -41,7 +41,7 @@ body {
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
-  background: #43a047;
+  background: #4c1e72;
   color: #fff;
   cursor: pointer;
 }
@@ -51,8 +51,7 @@ body {
 }
 
 .chat-window {
-  width: 300px;
-  height: 420px;
+  width: 60vw;
 }
 
 .chat-window p {
@@ -60,8 +59,8 @@ body {
 }
 .chat-window .chat-header {
   height: 45px;
-  border-radius: 6px;
-  background: #263238;
+  background: #072230;
+  border-radius: 18px;
   position: relative;
   cursor: pointer;
 }
@@ -74,10 +73,10 @@ body {
 }
 
 .chat-window .chat-body {
-  height: calc(450px - (45px + 70px));
-  border: 1px solid #263238;
-  background: #fff;
-
+  height: 69vh;
+  border-radius: 20px;
+  margin-top: 5px;
+  background: url('https://wallpapercave.com/wp/wp4410716.jpg') no-repeat center center/cover;
   position: relative;
 }
 .chat-window .chat-body .message-container {
@@ -101,13 +100,14 @@ body {
   height: auto;
   min-height: 40px;
   max-width: 120px;
-  background-color: #43a047;
+  background-color: #135219cc;
   border-radius: 5px;
   color: white;
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  margin-right: 5px;
-  margin-left: 5px;
+  /* margin-right: 5px; */
+  /* margin-left: 5px; */
   padding-right: 5px;
   padding-left: 5px;
   overflow-wrap: break-word;
@@ -115,34 +115,39 @@ body {
 }
 
 #you {
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 #you .message-content {
   justify-content: flex-start;
+  font-weight: bold;
+  padding: 0 5px;
 }
 
 #you .message-meta {
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin-left: 5px;
 }
 
 #other {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 #other .message-content {
-  justify-content: flex-end;
+  justify-content: flex-start;
   background-color: cornflowerblue;
+  font-weight: bold;
+  padding: 0 5px;
 }
 
 #other .message-meta {
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-right: 5px;
 }
 
 .message-meta #author {
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -152,8 +157,9 @@ body {
 }
 
 .chat-window .chat-footer {
-  height: 40px;
-  border: 1px solid #263238;
+  height: 3rem;
+  /* border: 1px solid #263238; */
+  margin-top: 1rem;
   border-top: none;
   display: flex;
 }
@@ -161,10 +167,11 @@ body {
 .chat-window .chat-footer input {
   height: 100%;
   flex: 85%;
-  border: 0;
+  border-radius: 20px;
+  border: 1px solid grey;
   padding: 0 0.7em;
   font-size: 1em;
-  border-right: 1px dotted #607d8b;
+  /* border-right: 1px dotted #607d8b; */
 
   outline: none;
   font-family: "Open Sans", sans-serif;
@@ -175,17 +182,17 @@ body {
   display: grid;
   place-items: center;
   cursor: pointer;
-  flex: 15%;
+  /* flex: 15%; */
   height: 100%;
-  background: transparent;
+  width: 3rem;
+  background: rgb(2, 73, 49);
+  border-radius: 50%;
+  padding-left: 10px;
   outline: none;
   font-size: 25px;
   color: lightgray;
 }
 
-.chat-window .chat-footer button:hover {
-  color: #43a047;
-}
 .hide {
   opacity: 0 !important;
 }

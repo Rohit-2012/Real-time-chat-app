@@ -2,7 +2,7 @@ const express = require('express')
 const app = express() //instance of express
 const http = require('http')
 const cors = require('cors')
-const {Server} = require('socket.io')
+const {Server} = require('socket.io') //importing Server class of the socket.io library
 
 app.use(cors())
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ScrollToBottom from 'react-scroll-to-bottom'
+import {IoSend} from 'react-icons/io5'
 
 function Chat({socket, username, room}) {
     const [currentMessage, setCurrentMessage] = useState('')
@@ -17,6 +18,7 @@ function Chat({socket, username, room}) {
             await socket.emit("send_message", messageData)
             setMessageList((list)=>[...list, messageData])
         }
+        setCurrentMessage('')
     }
 
     // listening event in frontend and receiving data from backend
@@ -28,7 +30,7 @@ function Chat({socket, username, room}) {
   return (
     <div className="chat-window">
     <div className="chat-header">
-      <p>Chugli Chatting</p>
+      <p>Chugli Chatting | roomID: {room}</p>
     </div>
     <div className="chat-body">
       <ScrollToBottom className="message-container">
@@ -36,7 +38,7 @@ function Chat({socket, username, room}) {
           return (
             <div
               className="message"
-              id={username === messageContent.author ?"other":"you"}
+              id={username === messageContent.author ?"you":"other"}
             >
               <div>
               <div className="message-meta">
@@ -58,7 +60,7 @@ function Chat({socket, username, room}) {
       <input
         type="text"
         value={currentMessage}
-        placeholder="Hey..."
+        placeholder="Say Something..."
         onChange={(event) => {
           setCurrentMessage(event.target.value);
         }}
@@ -66,7 +68,7 @@ function Chat({socket, username, room}) {
           event.key === "Enter" && sendMessage();
         }}
       />
-      <button onClick={sendMessage}>&#9658;</button>
+      <button onClick={sendMessage}><IoSend/></button>
     </div>
   </div>
   )
