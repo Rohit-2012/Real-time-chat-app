@@ -3,7 +3,7 @@ import {useState} from 'react'
 import io from 'socket.io-client' //for establishing connection
 import Chat from './Chat';
 
-const socket = io.connect("http://localhost:3001") //connecting frontend to backend
+const socket = io.connect("https://chatapp1-pqr6.onrender.com") //connecting frontend to backend
 
 function App() {
   const [username, setUsername] = useState('')
