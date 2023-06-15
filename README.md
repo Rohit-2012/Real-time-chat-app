@@ -25,4 +25,4 @@ Feel free to explore the codebase, make enhancements, and contribute to the proj
 - Express
 - CORS
 
-### Join us in the Real-Time Chat App project and create an immersive and engaging chat experience using React.js, Socket.io, Express, and CORS. Let the conversations begin!
+### Join me in the Real-Time Chat App project and create an immersive and engaging chat experience using React.js, Socket.io, Express, and CORS. Let the conversations begin!
